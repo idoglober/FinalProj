@@ -1,13 +1,12 @@
 import express from 'express';
-import * as pokemonController from '../controllers/pokemon.controller.js';
+import {getLocalPokemons, getLocalPokemonById, getExternalPokemon} from '../controllers/pokemon.controller.js';
 
 const router = express.Router();
 
+router.get('/local', getLocalPokemons);
 
-router.get('/local', pokemonController.getLocalPokemons);
+router.get('/local/:id', getLocalPokemonById);
 
-router.get('/local/:id', pokemonController.getLocalPokemonById);
-
-router.get('/external/:name', pokemonController.getExternalPokemon);
+router.get('/external/:name', getExternalPokemon);
 
 export default router;

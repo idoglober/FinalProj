@@ -1,8 +1,41 @@
 const localPokemons = [
-    { id: 1, name: 'Bulbasaur', type: 'Grass' },
-    { id: 4, name: 'Charmander', type: 'Fire' },
-    { id: 7, name: 'Squirtle', type: 'Water' },
-    { id: 25, name: 'Pikachu', type: 'Electric' }
+    {
+    "id": 1,
+    "name": "bulbasaur",
+    "height": 7,
+    "weight": 69,
+    "types": [
+        "grass",
+        "poison"
+    ]
+},
+    {
+    "id": 4,
+    "name": "charmander",
+    "height": 6,
+    "weight": 85,
+    "types": [
+        "fire"
+    ]
+},
+    {
+    "id": 7,
+    "name": "squirtle",
+    "height": 5,
+    "weight": 90,
+    "types": [
+        "water"
+    ]
+},
+    {
+    "id": 25,
+    "name": "pikachu",
+    "height": 4,
+    "weight": 60,
+    "types": [
+        "electric"
+    ]
+}
 ];
 
 export const getAllPokemons = async () => {

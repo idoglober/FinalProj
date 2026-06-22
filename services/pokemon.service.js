@@ -1,11 +1,11 @@
-import * as pokemonDal from '../dal/pokemon.dal.js';
+import {getAllPokemons, getPokemonById, } from '../dal/pokemon.dal.js';
 
 export const fetchAllLocalPokemons = async () => {
-    return await pokemonDal.getAllPokemons();
+    return await getAllPokemons();
 };
 
 export const fetchLocalPokemonById = async (id) => {
-    return await pokemonDal.getPokemonById(id);
+    return await getPokemonById(id);
 };
 
 export const fetchPokemonFromExternalApi = async (name) => {
@@ -13,7 +13,7 @@ export const fetchPokemonFromExternalApi = async (name) => {
     const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${name.toLowerCase()}`);
     
     if (!response.ok) {
-        throw new Error('Pokemon not found in PokeAPI');
+        throw new Error('Pokemon not found');
     }
     
     const data = await response.json();

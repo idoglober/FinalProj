@@ -1,4 +1,4 @@
-import * as pokemonService from '../services/pokemon.service.js';
+import {fetchAllLocalPokemons, fetchLocalPokemonById, fetchPokemonFromExternalApi} from '../services/pokemon.service.js';
 import logger from '../utils/logger.js';
 
 export const getLocalPokemons = async (req, res) => {
