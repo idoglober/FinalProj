@@ -35,7 +35,18 @@ const localPokemons = [
     "types": [
         "electric"
     ]
-}
+},
+    {
+    "id": 94,
+    "name": "gengar",
+    "height": 15,
+    "weight": 405,
+    "types": [
+        "ghost",
+        "poison"
+    ]
+},
+
 ];
 
 export const getAllPokemons = async () => {
